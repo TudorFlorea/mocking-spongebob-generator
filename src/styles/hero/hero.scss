@@ -1,0 +1,23 @@
+@import "../general/variables.scss";
+
+.hero {
+    margin: 0;
+    padding: 5rem 2rem;
+
+    &__heading {
+        font-family: $serif-font;
+        font-weight: bold;
+        font-size: 3rem;
+        color: #fff;
+        text-align: center;
+        @media screen and (max-width: 1000px) {
+            font-size: 2.5rem;
+        }
+    
+        @media screen and (max-width: 600px) {
+            font-size: 2rem;
+        }
+    }
+
+
+}

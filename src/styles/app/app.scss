@@ -1,0 +1,82 @@
+@import "../general/variables.scss";
+
+.app {
+    max-width: 1200px;
+    width: 100%;
+    background-color: $light-gray;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    padding: 3rem 1rem;
+
+    &__input {
+        max-width: 800px;
+        width: 100%;
+        display: block;
+        border-radius: 0.2rem;
+        margin: 1rem auto;
+        height: 5rem;  
+        border: 0;
+        border-bottom: 1px solid $gray;
+        outline: 0;
+        font-size: 1.2rem;
+        color: #212121;
+        padding: 1rem;
+        background: #fff;
+        transition: border-color 0.2s;
+        resize: none;
+
+        &--disabled {
+            background: $gray;
+        }
+
+        &:focus {
+            border-bottom: 2px solid $secondary-color;
+        }
+    }
+
+    &__canvas {
+        max-width: 800px;
+        max-height: 450px;
+        width: 100%;
+        height: 100%;
+        margin: 1rem auto;
+        display: block;
+    }
+
+    &__button {
+        background-color: $secondary-color;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        font-family: $serif-font;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        transition: all .3s ease-out;
+        box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.225);
+
+        &:hover {
+            text-decoration: none;
+            box-shadow: 0 10px 18px 0px rgba(0, 0, 0, 0.225);
+            cursor: pointer;
+        }
+    }
+
+    .center {
+        @media screen and (max-width: 550px) {
+            flex-direction: column;
+            .radio {
+                font-size: 1.5rem;
+            }
+        }
+ 
+    }
+
+    @media screen and (max-width: 1300px) {
+        //do Smth
+        width: 90%;
+    }
+}

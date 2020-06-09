@@ -1,0 +1,62 @@
+@import "../general/variables.scss";
+
+.radio {
+    position: relative;
+    cursor: pointer;
+    line-height: 2rem;
+    font-size: 2rem;
+    margin: 1rem;
+    display: inline-block;
+    font-family: $serif-font;
+    color: $dark-gray;
+
+    &--checked {
+        color: $primary-color;
+    }
+
+    &__label {
+        position: relative;
+        display: block;
+        float: left;
+        margin-right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid $dark-gray;
+        border-radius: 100%;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0.38rem;
+            left: 0.38rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 100%;
+            background: $primary-color;
+            transform: scale(0);
+            transition: all .2s ease;
+            opacity: .08;
+            pointer-events: none;
+        }
+    }
+
+    &:hover {
+        &__label {
+            &:after {
+                transform: scale(3.6);
+            }
+        }    
+    }
+
+    &__input {
+        &:checked + .radio__label {
+            border-color: $primary-color;
+
+            &:after {
+                transform: scale(1);
+                transition: all .2s cubic-bezier(.35,.9,.4,.9);
+                opacity: 1;
+            }
+        }
+    }
+}

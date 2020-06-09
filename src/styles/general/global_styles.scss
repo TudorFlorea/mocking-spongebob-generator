@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: $secondary-color; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $secondary-color, $primary-color); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $secondary-color, $primary-color);
+}
+
+.hidden {
+    display: none;
+}
